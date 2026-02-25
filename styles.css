@@ -8,74 +8,80 @@
 /* Corpo da página */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f1f1f1;
-    color: #333;
+    background-color: #212121; /* Fundo escuro para o corpo */
+    color: #f5f5f5; /* Texto claro para contraste */
+    line-height: 1.6;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #5b8fbb;
+    background-color: #d32f2f; /* Vermelho vibrante */
     color: white;
-    padding: 20px;
+    padding: 30px 0;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header .logo h1 {
-    font-size: 2.5em;
-    margin: 0;
+    font-size: 3em;
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 
-/* Banner */
+/* Banner Principal */
 .section-banner {
-    background-color: #dbe6f0;
+    background-color: #121212; /* Fundo mais escuro para o banner */
     text-align: center;
-    padding: 60px 20px;
+    padding: 100px 20px;
     margin-bottom: 40px;
+    border-bottom: 5px solid #d32f2f; /* Linha vermelha para destacar */
 }
 
 .banner-text h2 {
-    font-size: 2.5em;
-    color: #3a6ea5;
-    margin-bottom: 10px;
+    font-size: 2.8em;
+    color: #f44336; /* Vermelho vibrante */
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .banner-text p {
-    font-size: 1.2em;
-    color: #3a6ea5;
+    font-size: 1.4em;
+    color: #bbb;
 }
 
-/* Seções */
+/* Seção dos Filmes */
 .section {
     padding: 40px 20px;
-    background-color: white;
+    background-color: #333; /* Fundo escuro para os filmes */
     margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
     text-align: center;
 }
 
 h2 {
-    font-size: 2.2em;
-    color: #3a6ea5;
-    margin-bottom: 20px;
+    font-size: 2.4em;
+    color: #d32f2f; /* Vermelho vibrante */
+    margin-bottom: 30px;
+    font-weight: 500;
 }
 
-/* Grid de eventos */
+/* Grid de eventos (filmes) */
 .eventos-grid {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
     margin: 0 auto;
 }
 
-/* Cada evento */
+/* Cada filme */
 .evento {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #444; /* Fundo cinza escuro */
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
     width: 300px;
-    padding: 15px;
+    padding: 25px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 20px;
@@ -83,57 +89,61 @@ h2 {
 
 .evento:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
 .evento img {
-    width: 100%;  /* Assegura que a imagem ocupe toda a largura do contêiner */
-    height: auto; /* Ajuste a altura proporcionalmente */
-    object-fit: cover; /* Preenche o espaço sem distorcer a imagem */
-    border-radius: 8px; /* Adiciona borda arredondada */
-    display: block; /* Impede possíveis problemas de exibição */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
-/* Texto do evento */
+/* Título do filme */
 .evento h3 {
-    color: #3a6ea5;
-    font-size: 1.6em;
-    margin-top: 10px;
+    color: #f44336; /* Vermelho claro */
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    font-weight: 500;
 }
 
+/* Descrição do filme */
 .evento p {
-    color: #555;
+    color: #bbb;
     font-size: 1.1em;
+    margin-bottom: 15px;
 }
 
 /* Botão de compra */
 .btn-comprar {
-    padding: 12px 25px;
-    background-color: #5b8fbb;
+    padding: 12px 30px;
+    background-color: #d32f2f; /* Cor de fundo do botão */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.1em;
-    margin-top: 20px;
     transition: background-color 0.3s;
     display: inline-block;
+    font-weight: 600;
 }
 
 .btn-comprar:hover {
-    background-color: #3a6ea5;
+    background-color: #c2185b; /* Cor mais escura para o hover */
 }
 
 /* Rodapé */
 footer {
-    background-color: #5b8fbb;
-    color: white;
+    background-color: #121212; /* Fundo escuro para o rodapé */
+    color: #bbb;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+    font-size: 1em;
 }
 
-/* Responsividade */
+/* Responsividade para dispositivos menores */
 @media (max-width: 768px) {
     .eventos-grid {
         flex-direction: column;
@@ -141,19 +151,18 @@ footer {
     }
 
     .evento {
-        width: 80%; /* Ajusta o tamanho dos eventos para telas menores */
-        margin-bottom: 20px;
+        width: 80%;
     }
 
     .banner-text h2 {
-        font-size: 2em;
+        font-size: 2.2em;
     }
 
     .banner-text p {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     header .logo h1 {
-        font-size: 2em;
+        font-size: 2.5em;
     }
 }
