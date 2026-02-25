@@ -8,8 +8,8 @@
 /* Corpo da página */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #212121; /* Fundo escuro para o corpo */
-    color: #f5f5f5; /* Texto claro para contraste */
+    background-color: #212121; /* Fundo escuro */
+    color: #f5f5f5; /* Texto claro */
     line-height: 1.6;
 }
 
@@ -34,7 +34,7 @@ header .logo h1 {
     text-align: center;
     padding: 100px 20px;
     margin-bottom: 40px;
-    border-bottom: 5px solid #d32f2f; /* Linha vermelha para destacar */
+    border-bottom: 5px solid #d32f2f; /* Linha vermelha para destaque */
 }
 
 .banner-text h2 {
@@ -85,6 +85,7 @@ h2 {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 20px;
+    height: 450px; /* Altura fixada para as imagens se manterem do mesmo tamanho */
 }
 
 .evento:hover {
@@ -94,9 +95,9 @@ h2 {
 
 .evento img {
     width: 100%;
-    height: auto;
+    height: 250px; /* Tamanho fixo para garantir que as imagens tenham a mesma altura */
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: cover; /* Ajusta a imagem sem distorção, preenchendo o espaço */
     margin-bottom: 15px;
 }
 
