@@ -1,0 +1,149 @@
+/* Reset de margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #5b8fbb;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2.5em;
+}
+
+/* Banner */
+.section-banner {
+    background-color: #dbe6f0;
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+}
+
+.banner-text h2 {
+    font-size: 2.5em;
+    color: #3a6ea5;
+}
+
+.banner-text p {
+    font-size: 1.2em;
+    color: #3a6ea5;
+}
+
+/* Seções */
+.section {
+    padding: 40px 20px;
+    background-color: white;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: #3a6ea5;
+    margin-bottom: 20px;
+}
+
+/* Grid de eventos */
+.eventos-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Cada evento */
+.evento {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.evento:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.evento img {
+    width: 100%;  /* A imagem ocupa 100% da largura do contêiner */
+    height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+    border-radius: 8px;
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorção */
+}
+
+/* Texto do evento */
+.evento h3 {
+    color: #3a6ea5;
+    font-size: 1.6em;
+    margin-top: 10px;
+}
+
+.evento p {
+    color: #555;
+    font-size: 1.1em;
+}
+
+/* Botão de compra */
+.btn-comprar {
+    padding: 12px 25px;
+    background-color: #5b8fbb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #3a6ea5;
+}
+
+/* Rodapé */
+footer {
+    background-color: #5b8fbb;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .eventos-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .evento {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .banner-text h2 {
+        font-size: 2em;
+    }
+
+    .banner-text p {
+        font-size: 1em;
+    }
+}
