@@ -10,6 +10,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f1f1f1;
     color: #333;
+    line-height: 1.6; /* Melhorar a legibilidade com um espaçamento de linha */
 }
 
 /* Cabeçalho */
@@ -22,6 +23,7 @@ header {
 
 header .logo h1 {
     font-size: 2.5em;
+    margin: 0; /* Remover margens extras */
 }
 
 /* Banner */
@@ -35,6 +37,7 @@ header .logo h1 {
 .banner-text h2 {
     font-size: 2.5em;
     color: #3a6ea5;
+    margin-bottom: 10px; /* Garantir um espaçamento entre o título e o parágrafo */
 }
 
 .banner-text p {
@@ -64,6 +67,7 @@ h2 {
     justify-content: space-around;
     gap: 20px;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 /* Cada evento */
@@ -75,6 +79,7 @@ h2 {
     padding: 15px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Garantir que haja espaçamento entre os eventos */
 }
 
 .evento:hover {
@@ -87,6 +92,7 @@ h2 {
     height: auto; /* A altura será ajustada automaticamente para manter a proporção */
     border-radius: 8px;
     object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorção */
+    max-height: 200px; /* Limitar a altura da imagem para que ela não sobrecarregue o layout */
 }
 
 /* Texto do evento */
@@ -112,6 +118,7 @@ h2 {
     font-size: 1.1em;
     margin-top: 20px;
     transition: background-color 0.3s;
+    display: inline-block; /* Garantir que o botão tenha o comportamento correto de clique */
 }
 
 .btn-comprar:hover {
@@ -129,13 +136,14 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
+    /* Para telas menores, altere o layout */
     .eventos-grid {
         flex-direction: column;
         align-items: center;
     }
 
     .evento {
-        width: 80%;
+        width: 80%; /* Tornar os eventos maiores em telas menores */
         margin-bottom: 20px;
     }
 
@@ -145,5 +153,9 @@ footer {
 
     .banner-text p {
         font-size: 1em;
+    }
+
+    header .logo h1 {
+        font-size: 2em; /* Ajustar o tamanho da logo para dispositivos menores */
     }
 }
