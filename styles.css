@@ -7,66 +7,77 @@
 
 /* Corpo da página */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #212121; /* Fundo escuro */
-    color: #f5f5f5; /* Texto claro */
+    font-family: 'Roboto', sans-serif;
+    background-color: #1c1c1c; /* Fundo escuro para dar contraste */
+    color: #fff; /* Texto branco */
     line-height: 1.6;
+    font-weight: 400;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #d32f2f; /* Vermelho vibrante */
+    background: linear-gradient(45deg, #d32f2f, #c2185b); /* Gradiente suave de vermelho */
     color: white;
-    padding: 30px 0;
+    padding: 50px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 header .logo h1 {
-    font-size: 3em;
-    letter-spacing: 2px;
-    font-weight: bold;
+    font-size: 4em;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Banner Principal */
 .section-banner {
-    background-color: #121212; /* Fundo mais escuro para o banner */
+    background: url('images/banner-background.jpg') no-repeat center center/cover; /* Imagem de fundo para o banner */
+    color: white;
     text-align: center;
-    padding: 100px 20px;
-    margin-bottom: 40px;
-    border-bottom: 5px solid #d32f2f; /* Linha vermelha para destaque */
+    padding: 120px 20px;
+    margin-bottom: 60px;
+    background-blur: 5px;
+    position: relative;
+    z-index: 0;
 }
 
 .banner-text h2 {
-    font-size: 2.8em;
+    font-size: 3.5em;
     color: #f44336; /* Vermelho vibrante */
-    margin-bottom: 20px;
-    font-weight: 600;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
 }
 
 .banner-text p {
-    font-size: 1.4em;
+    font-size: 1.6em;
     color: #bbb;
 }
 
 /* Seção dos Filmes */
 .section {
-    padding: 40px 20px;
-    background-color: #333; /* Fundo escuro para os filmes */
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    padding: 60px 20px;
+    background-color: #2a2a2a; /* Fundo escuro para os filmes */
+    margin: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     text-align: center;
+    transition: all 0.3s ease-in-out;
 }
 
 h2 {
-    font-size: 2.4em;
+    font-size: 3em;
     color: #d32f2f; /* Vermelho vibrante */
-    margin-bottom: 30px;
-    font-weight: 500;
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-/* Grid de eventos (filmes) */
+/* Grid de filmes */
 .eventos-grid {
     display: flex;
     justify-content: space-between;
@@ -77,71 +88,81 @@ h2 {
 
 /* Cada filme */
 .evento {
-    background-color: #444; /* Fundo cinza escuro */
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    background-color: #444; /* Fundo escuro para cada evento */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     width: 300px;
     padding: 25px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 20px;
-    height: 450px; /* Altura fixada para as imagens se manterem do mesmo tamanho */
+    margin-bottom: 30px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
 }
 
 .evento:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transform: translateY(-10px); /* Efeito de elevação */
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
 }
 
 .evento img {
     width: 100%;
-    height: 250px; /* Tamanho fixo para garantir que as imagens tenham a mesma altura */
-    border-radius: 8px;
-    object-fit: cover; /* Ajusta a imagem sem distorção, preenchendo o espaço */
-    margin-bottom: 15px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Título do filme */
+/* Efeito de zoom nas imagens ao passar o mouse */
+.evento img:hover {
+    transform: scale(1.05);
+}
+
 .evento h3 {
     color: #f44336; /* Vermelho claro */
-    font-size: 1.8em;
+    font-size: 1.9em;
+    margin-top: 20px;
     margin-bottom: 10px;
-    font-weight: 500;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
-/* Descrição do filme */
 .evento p {
     color: #bbb;
-    font-size: 1.1em;
-    margin-bottom: 15px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
 /* Botão de compra */
 .btn-comprar {
-    padding: 12px 30px;
-    background-color: #d32f2f; /* Cor de fundo do botão */
+    padding: 14px 40px;
+    background-color: #d32f2f; /* Vermelho vibrante */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s;
-    display: inline-block;
+    font-size: 1.2em;
     font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    letter-spacing: 1px;
 }
 
 .btn-comprar:hover {
     background-color: #c2185b; /* Cor mais escura para o hover */
+    transform: translateY(-3px); /* Efeito de elevação */
 }
 
 /* Rodapé */
 footer {
-    background-color: #121212; /* Fundo escuro para o rodapé */
+    background-color: #121212;
     color: #bbb;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    font-size: 1em;
+    padding: 30px;
+    margin-top: 60px;
+    font-size: 1.1em;
+    box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsividade para dispositivos menores */
@@ -153,17 +174,18 @@ footer {
 
     .evento {
         width: 80%;
+        height: auto;
     }
 
     .banner-text h2 {
-        font-size: 2.2em;
+        font-size: 2.5em;
     }
 
     .banner-text p {
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 
     header .logo h1 {
-        font-size: 2.5em;
+        font-size: 2.8em;
     }
 }
